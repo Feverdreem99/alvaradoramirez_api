@@ -17,4 +17,6 @@ Route::get('/zonas/pais/{id_pais}', [ZonaController::class, 'getByPais']);
 Route::get('/users', [UserController::class, 'index']);
 Route::post('/nuevousuario', [UserController::class, 'store']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/usuario', [AuthController::class, 'me'])->middleware('auth:sanctum');
+
 
