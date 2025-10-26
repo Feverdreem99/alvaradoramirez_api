@@ -15,4 +15,9 @@ class Zona extends Model
         'nombre_zona',
         'id_pais'
     ];
+
+    public function pais()
+{
+    return $this->belongsTo(Pais::class, 'id_pais', 'id_pais');
+}
 }
